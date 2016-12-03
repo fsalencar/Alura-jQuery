@@ -6,7 +6,6 @@ var removeItem = function(event){
 	var atual = parseInt($("#quantidade-de-itens").text());
 	var novaQuantidade = atual - 1;
 	$("#quantidade-de-itens").text(novaQuantidade);
-
 };
 
 var aposInicializado = function(){

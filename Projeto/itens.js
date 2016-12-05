@@ -1,14 +1,13 @@
 var removeItem = function(event){
+	event.preventDefault();
 	var self = $(this);
 	self.closest("tr").remove();
 
-	event.preventDefault();
-	var atual = parseInt($("#quantidade-de-itens").text());
-	var novaQuantidade = atual - 1;
-	$("#quantidade-de-itens").text(novaQuantidade);
-};
 
-var aposInicializado = function(){
+	atualizaDados()
+
+};
+var atualizaDados = function(){
 	var itens = $(".item-total");
 	var total = 0;
 		for(var i = 0; i < itens.length ; i++){
@@ -20,6 +19,9 @@ var aposInicializado = function(){
 			console.log("Valor total é: " + total);
 			$("#valor-total").text(total);
 			$("#quantidade-de-itens").text(itens.length);
-			$(".remove-item").click(removeItem);
+}
+var aposInicializado = function(){
+	atualizaDados();
+	$(".remove-item").click(removeItem);
 	};
 $(aposInicializado);

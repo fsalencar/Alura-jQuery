@@ -47,14 +47,14 @@ td {
 	font-style: italic;
 }
 
-.remove-item {	
+.remove-item {
 	background: #F30;
 	border-radius: 2px;
 	color: white;
 	font-size: 0.7em;
 	text-decoration: none;
 	text-transform: uppercase;
-	
+
 	display: inline-block;
 	padding: 0.5em;
 }
@@ -66,12 +66,15 @@ input[type=button] {
 	text-transform: uppercase;
 
 	box-shadow: 0 1px 3px #777;
-	
+
 	display: block;
 	padding: 0.5em 1em;
 	margin: 1em 0;
 
 	-webkit-appearance: none;
+}
+.recuperado{
+	background: #FE0;
 }
 
 .resumo {
@@ -81,4 +84,3 @@ input[type=button] {
 	line-height: 2;
 	margin: 2em 0;
 }
-

@@ -64,7 +64,36 @@
 					<td class="item-total">199.00</td>
 					<td><a class="remove-item" href="">(remover)</a></td>
 				</tr>
+			</tbody>
+		</table>
+
+		<div>
+			<input type="button" value="Desfazer" class="undo">
+		</div>
+
+		<div>
+			Valor total: R$<span class="valor-total">0</span></br>
+			Quantidade de itens: <span class="quantidade-de-itens">0</span>
+		</div>
+
+	</div>
+
+
+
+	<div class="carrinho">
+		<h2>Carrinho entrega Rio de Janeiro</h2>
+		<table>
+			<thead>
 				<tr>
+					<td></td>
+					<td>Nome</td>
+					<td>Quantidade</td>
+					<td>Valor</td>
+					<td>Total</td>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
 					<td><img src="imagens/camiseta.jpg"></td>
 					<td>Camiseta G</td>
 					<td>1</td>
@@ -75,15 +104,18 @@
 			</tbody>
 		</table>
 
-	</div>
-	<div>
-		<input type="button" value="Desfazer" id="undo">
+		<div>
+			<input type="button" value="Desfazer" class="undo">
+		</div>
+
+		<div>
+			Valor total: R$<span class="valor-total">0</span></br>
+			Quantidade de itens: <span class="quantidade-de-itens">0</span>
+		</div>
+
 	</div>
 
-	<div>
-		Valor total: R$<span id="valor-total">0</span></br>
-		Quantidade de itens: <span id="quantidade-de-itens">0</span>
-	</div>
+
 	<script src="./assets/jquery-2.0.3.min.js"></script>
 	<script src="./js/itens.js"></script>
 	</body>

@@ -33,9 +33,42 @@ var undo= function(){
 	atualizaDados();
 }
 
+var umaPropaganda = function(){
+	var propagandas = [
+		"O que acha de comprar uma motocicleta?",
+		"O que acha de comprar uma bicicleta?",
+		"O que acha de comprar uma Nave espacial?",
+		"O que acha de comprar um satelite?"
+	];
+	var posicao = Math.floor(propagandas.length * Math.random());
+	var texto = propagandas[posicao];
+	var tr = $("<tr>").addClass("propaganda").append($("<td>"));
+	tr.find("td").attr("colspan",6).text(texto);
+	return tr;
+}
+var destaque = function() {
+	$(this).addClass("hovering");
+}
+var tiraDestaque = function(){
+	$(this).removeClass("hovering");
+
+}
+
 var aposInicializado = function(){
 	atualizaDados();
 	$(".undo").click(undo);
 	$(".remove-item").click(removeItem);
+	$(".carrinho").each(function(){
+		$(this).find("tr:nth-child(3n),tr:last").each(function(){
+			umaPropaganda().insertAfter($(this));
+		})
+	})
+$(".carrinho tbody tr").hover(destaque,tiraDestaque);
+	//$("tr").on("mouseenter",destaque);
+	//$("tr").on("mouseleave",tiraDestaque)
+	//	$("tr").hover(destaque, tiraDestaque);
+
+
+
 	};
 $(aposInicializado);

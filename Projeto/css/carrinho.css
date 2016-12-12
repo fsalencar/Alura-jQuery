@@ -55,7 +55,7 @@ td {
 	text-decoration: none;
 	text-transform: uppercase;
 
-	display: inline-block;
+	display: none;
 	padding: 0.5em;
 }
 
@@ -79,6 +79,10 @@ input[type=button] {
 
 .hovering{
 	background: #ccc;
+}
+
+#mostra-propagandas{
+display: none;
 }
 
 .resumo {

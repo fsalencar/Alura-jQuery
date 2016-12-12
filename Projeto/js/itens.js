@@ -47,11 +47,18 @@ var umaPropaganda = function(){
 	return tr;
 }
 var destaque = function() {
+	$(this).find(".remove-item").fadeIn();
 	$(this).addClass("hovering");
 }
 var tiraDestaque = function(){
+	$(this).find(".remove-item").fadeOut();
 	$(this).removeClass("hovering");
 
+}
+var alternaPropagandas = function(event){
+	event.preventDefault();
+	$(".propaganda").fadeToggle(1000);
+	$(".alterna-propaganda").toggle();
 }
 
 var aposInicializado = function(){
@@ -64,6 +71,7 @@ var aposInicializado = function(){
 		})
 	})
 $(".carrinho tbody tr").hover(destaque,tiraDestaque);
+$(".alterna-propaganda").click(alternaPropagandas);
 	//$("tr").on("mouseenter",destaque);
 	//$("tr").on("mouseleave",tiraDestaque)
 	//	$("tr").hover(destaque, tiraDestaque);
